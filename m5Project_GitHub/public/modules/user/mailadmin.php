@@ -54,7 +54,7 @@ if(isset($users)){
                 //$mail->Port = 25;
                 $mail->From = "EmailAdress";
                 $mail->FromName = "Admin";
-                $mail->addAddress($row['email'], "Admin");
+                $mail->addAddress($row['email'], $row['firstname']);
                 $mail->isHTML(TRUE);
                 $mail->Subject = "News Letter";
                 $mail->Body = "<p>$mailcontent</p><br><br><a href=$link >Unsubscribe</a>";
